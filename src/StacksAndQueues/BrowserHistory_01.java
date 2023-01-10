@@ -23,8 +23,6 @@ public class BrowserHistory_01 {
                 System.out.println(stack.peek());
             }
             input = sc.nextLine();
-
-
         }
     }
 }
