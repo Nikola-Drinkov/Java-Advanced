@@ -2,7 +2,6 @@ package StacksAndQueues;
 
 import java.util.ArrayDeque;
 import java.util.Scanner;
-
 public class BrowserHistory_01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
