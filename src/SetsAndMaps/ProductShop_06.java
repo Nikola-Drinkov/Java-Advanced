@@ -5,7 +5,7 @@ import java.util.*;
 public class ProductShop_06 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        TreeMap<String, List<String>> shopsMap = new TreeMap<>();
+        TreeMap<String, LinkedHashMap<String, Double>> shopsMap = new TreeMap<>();
         LinkedHashMap<String, Double> productsMap = new LinkedHashMap<>();
 
         String input = sc.nextLine();
@@ -15,9 +15,9 @@ public class ProductShop_06 {
             String product = tokens[1];
             Double price = Double.parseDouble(tokens[2]);
             if(!shopsMap.containsKey(shop)){
-                shopsMap.put(shop,new ArrayList<>());
+                shopsMap.put(shop,new LinkedHashMap<>());
             }
-            shopsMap.get(shop).add(product);
+            shopsMap.get(shop).put(product,price);
             if(!productsMap.containsKey(product)){
                 productsMap.put(product,0.00);
             }
@@ -25,11 +25,12 @@ public class ProductShop_06 {
 
             input = sc.nextLine();
         }
-        for (Map.Entry<String, List<String>> entry : shopsMap.entrySet()) {
+        for (Map.Entry<String, LinkedHashMap<String,Double>> entry : shopsMap.entrySet()) {
             System.out.println(entry.getKey()+"->");
-            for(String product: entry.getValue()){
-                System.out.printf("Product: %s, Price: %.1f%n",product,productsMap.get(product));
+            for (Map.Entry<String, Double> doubleEntry : entry.getValue().entrySet()) {
+                System.out.printf("Product: %s, Price: %.1f%n",doubleEntry.getKey(),doubleEntry.getValue());
             }
+
         }
 
     }
