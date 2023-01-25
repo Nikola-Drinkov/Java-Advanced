@@ -1,4 +1,4 @@
-package ExamPrepStacksQueues;
+package ExamPrep;
 
 import java.util.*;
 
