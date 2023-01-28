@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DefiningClasses/DefiningClasses.iml" filepath="$PROJECT_DIR$/DefiningClasses/DefiningClasses.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java Advanced.iml" filepath="$PROJECT_DIR$/Java Advanced.iml" />
     </modules>
   </component>
