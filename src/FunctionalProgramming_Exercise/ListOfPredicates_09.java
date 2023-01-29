@@ -15,7 +15,10 @@ public class ListOfPredicates_09 {
         Predicate<Integer> check = x->{
             boolean valid = true;
             for(int divider:dividers){
-                if(x%divider!=0) valid = false;
+                if (x % divider != 0) {
+                    valid = false;
+                    break;
+                }
             }
             return valid;
         };
