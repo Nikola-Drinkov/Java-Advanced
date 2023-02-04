@@ -5,8 +5,8 @@ import java.util.List;
 
 
 public class Shelter {
-    List<Animal> data;
-    int capacity;
+    private List<Animal> data;
+    private int capacity;
 
     public Shelter(int capacity) {
         this.capacity = capacity;
