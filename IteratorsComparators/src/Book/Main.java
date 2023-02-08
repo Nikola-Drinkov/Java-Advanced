@@ -6,7 +6,7 @@ public class Main {
         Book bookThree = new Book("The Documents in the Case", 2002);
         Book bookTwo = new Book("The Documents in the Case", 1930, "Dorothy Sayers", "Robert Eustace");
 
-        Library<Book> library = new Library<Book>(bookOne, bookTwo, bookThree);
+        Library library = new Library(bookOne, bookTwo, bookThree);
 
         for (Book book : library) {
             System.out.println(book.getTitle());
